@@ -10,38 +10,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// func formHandler(w http.ResponseWriter, r *http.Request) {
-// 	if err := r.ParseForm(); err != nil {
-// 		fmt.Fprintf(w, "ParseForm() err: %v", err)
-// 		return
-// 	}
-// 	fmt.Fprintf(w, "POST request successful")
-// 	name := r.FormValue("name")
-// 	address := r.FormValue("address")
-// 	fmt.Fprintf(w, "Name = %s\n", name)
-// 	fmt.Fprintf(w, "Address = %s\n", address)
-// }
-
-// func loginHandler(c *gin.Context) {
-// 	uml := strings.Split(c.FullPath(), "/")
-// 	if uml[len(uml)-1] != "login" {
-// 		http.Error(c.Writer, "404 not found.", http.StatusNotFound)
-// 		return
-// 	}
-// 	if c.Request.Method != "POST" {
-// 		http.Error(c.Writer, "Method is not supported.", http.StatusNotFound)
-// 		return
-// 	}
-// 	if err := c.Params; err != nil {
-// 		fmt.Fprintf(c.Writer, "ParseForm() err: %v", err)
-// 		return
-// 	}
-// 	username := c.Param("username")
-// 	password := c.Param("password")
-// 	if db.UserLogin(username, password) {
-// 	}
-// 	// could not connect
-// }
 
 func chatRoomHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/chatRoom" {
